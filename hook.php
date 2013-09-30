@@ -13,6 +13,8 @@ if (file_exists('key.php'))
         _exec('pwd');
         _exec('git pull');
         _exec('git submodule update');
+        _exec('./protected/yiic migrate --interactive=0');
+        _exec('./protected/yiic clearcache all');
     }
 }
 
